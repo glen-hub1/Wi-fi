@@ -1,0 +1,70 @@
+/* basic reset */
+* { margin:0; padding:0; box-sizing:border-box; font-family: "Poppins", sans-serif; }
+
+body {
+  background: linear-gradient(135deg,#0a66c2,#003c8f);
+  min-height:100vh;
+  padding:25px;
+  transition: .3s;
+}
+
+/* dark mode tweaks */
+body.dark { background: linear-gradient(135deg,#0d0d0d,#1a1a1a); color:#fff; }
+.dark .container, .dark .glass { background: rgba(255,255,255,0.06); color:#fff; }
+
+/* container */
+.container {
+  background:white;
+  max-width:420px;
+  margin:auto;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 35px rgba(0,0,0,.25);
+  transition:.3s;
+}
+.fade-in { animation: fade .45s ease-in-out; }
+@keyframes fade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+
+.subtitle { text-align:center; margin-bottom:14px; opacity:.75; }
+
+/* glass */
+.glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.6); border-radius:12px; border:1px solid rgba(255,255,255,0.3); padding:12px; margin-bottom:12px; }
+
+/* inputs */
+input[type="file"], input[type="text"] {
+  width:100%; padding:11px; border-radius:10px; border:1px solid #ddd; background:#fff;
+}
+
+/* preview */
+.preview { width:100%; border-radius:12px; margin-bottom:12px; box-shadow:0 6px 20px rgba(0,0,0,0.12); }
+
+/* button */
+button { width:100%; padding:14px; background:#0a66c2; color:#fff; border:none; border-radius:12px; font-size:16px; cursor:pointer; transition:.18s; }
+button:hover { background:#004b94; }
+
+/* ripple effect */
+.ripple { position:relative; overflow:hidden; }
+.ripple:active::after {
+  content:""; position:absolute; width:200%; height:200%; background:rgba(255,255,255,0.35);
+  top:50%; left:50%; transform:translate(-50%,-50%); border-radius:50%; animation:rippleAnim .5s ease-out;
+}
+@keyframes rippleAnim { from{opacity:1} to{opacity:0; transform:translate(-50%,-50%) scale(2)} }
+
+/* loader */
+.loader { border:5px solid #e3f2ff; border-top:5px solid #0a66c2; border-radius:50%; width:40px; height:40px; animation:spin .8s linear infinite; margin:10px auto; }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+.hidden { display:none !important; }
+
+/* result */
+.result-box { margin-top:16px; padding:14px; border-radius:12px; background:#e9f3ff; border:1px solid #bcdfff; text-align:center; }
+
+/* floating badge */
+.floating-badge { position:fixed; bottom:20px; right:20px; background:#0a66c2; padding:10px 14px; border-radius:30px; color:#fff; box-shadow:0 10px 25px rgba(0,0,0,0.25); }
+
+/* theme toggle */
+.theme-toggle { position:fixed; top:18px; right:18px; background:#fff; color:#333; padding:10px; border-radius:50%; cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.15); font-size:18px; }
+.dark .theme-toggle { background:#000; color:#fff; }
+
+/* ensure copyBtn hidden initially */
+#copyBtn { display:none; }
