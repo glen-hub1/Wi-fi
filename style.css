@@ -1,0 +1,26 @@
+/* style.css */
+
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+
+body { background: #f2f2f2; display: flex; justify-content: center; padding: 20px; }
+
+.container { background: #fff; padding: 20px; width: 100%; max-width: 450px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+
+h1 { text-align: center; margin-bottom: 15px; }
+
+.card { background: #fafafa; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #ddd; }
+
+label { font-weight: bold; display: block; margin-bottom: 5px; }
+
+input[type="file"], input[type="text"] { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; }
+
+button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+
+button:hover { background: #0056b3; }
+
+#result { margin-top: 20px; text-align: center; padding: 15px; background: #e8f5e9; border-radius: 10px; border: 1px solid #c8e6c9; }
+
+.hidden { display: none; }
+
+footer { text-align: center; margin-top: 15px; opacity: 0.7; font-size: 14px; }
