@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi-Fi QR Decoder • GLEN TECH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle" id="themeToggle">🌙</div>
+
+  <div class="container fade-in">
+    <h1>🔐 Wi-Fi QR Decoder</h1>
+    <p class="subtitle">Upload a QR screenshot or paste a QR URL</p>
+
+    <!-- Preview -->
+    <img id="preview" class="hidden preview" />
+
+    <!-- Upload Image -->
+    <div class="card glass">
+      <label>Upload QR Screenshot</label>
+      <input type="file" id="qrImage" accept="image/*" />
+    </div>
+
+    <!-- Paste URL -->
+    <div class="card glass">
+      <label>Paste QR Image URL</label>
+      <input type="text" id="qrUrl" placeholder="https://example.com/qr.png" />
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="hidden loader"></div>
+
+    <button id="generateBtn" class="ripple">Generate</button>
+
+    <div id="result" class="hidden result-box glass">
+      <h2>Result</h2>
+      <p id="content"></p>
+      <p id="wifiPassword"></p>
+      <button id="copyBtn" class="ripple">Copy Password</button>
+    </div>
+  </div>
+
+  <!-- Floating Glen Tech Badge -->
+  <div class="floating-badge">💎 GLEN TECH</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
