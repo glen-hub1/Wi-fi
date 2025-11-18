@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi‑Fi QR Decoder • GLEN TECH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Wi‑Fi QR Decoder</h1>
+    <p>Upload Wi‑Fi QR screenshot or paste the URL.</p><!-- Upload image -->
+<div class="card">
+  <label>Upload Screenshot</label>
+  <input type="file" id="qrImage" accept="image/*" />
+</div>
+
+<!-- Paste URL -->
+<div class="card">
+  <label>Paste QR Code URL</label>
+  <input type="text" id="qrUrl" placeholder="https://example.com/qr.png" />
+</div>
+
+<button id="generateBtn">Generate</button>
+
+<div id="result" class="hidden">
+  <h2>Wi‑Fi Password</h2>
+  <p id="password"></p>
+  <button id="copyBtn">Copy Password</button>
+</div>
+
+<footer>Created by GLEN TECH</footer>
+
+  </div>  <script src="script.js"></script></body>
+</html>
